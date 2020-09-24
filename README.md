@@ -1,1 +1,1 @@
-# AdminLTEPainelAspNetCore
+# Painel com Admin LTE e DOTNET CORE 3.1 E ASPNET MVC
