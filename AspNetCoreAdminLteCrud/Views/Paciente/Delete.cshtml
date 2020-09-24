@@ -1,0 +1,75 @@
+﻿@model AspNetCoreAdminLteCrud.ViewModels.PacienteViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        Pacientes
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Pacientes</a></li>
+        <li class="active">Pacientes</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Deleta Paciente</h3>
+                </div>
+                <!-- /.box-header -->
+
+                <h3>Deseja deletar este paciente ?</h3>
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Telefone)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Telefone)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Clinica)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Clinica)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DataCadastro)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DataCadastro)
+                        </dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Delete" class="btn btn-danger" /> |
+                        <a asp-action="Index">Retornar</a>
+                    </form>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
